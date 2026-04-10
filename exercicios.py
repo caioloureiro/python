@@ -13,6 +13,9 @@ def espacos():
 	print("")
 	print("")
 	print("")
+
+def fim():
+	input("")
     
 # Exercício Python 001
 # Crie um programa que escreva "Olá, Mundo!" na tela.
@@ -89,4 +92,4 @@ print(f"Analisando o valor {n}")
 print(f"Seu antecessor é {n-1}")
 print(f"Seu sucessor é {n+1}")
 
-mudarTela()
+fim()
