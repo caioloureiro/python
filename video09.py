@@ -18,9 +18,14 @@ def limparTela():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def mudarTela():
-    input("Pressione Enter para continuar...")
+    input("")
     limparTela()
     
+def espacos():
+	print("")
+	print("")
+	print("")
+
 print("Tipagem de dados")
 print("Int - Números inteiros")
 print("Float - Números decimais")

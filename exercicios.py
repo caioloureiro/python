@@ -6,8 +6,13 @@ def limparTela():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def mudarTela():
-    input("Pressione Enter para continuar...")
+    input("")
     limparTela()
+    
+def espacos():
+	print("")
+	print("")
+	print("")
     
 # Exercício Python 001
 # Crie um programa que escreva "Olá, Mundo!" na tela.
@@ -57,7 +62,7 @@ if valor.isspace():
 
 if valor.isnumeric():
 	print(f"É numérico? {valor.isnumeric()}")
-	
+
 if valor.isalpha():
 	print(f"É letra? {valor.isalpha()}")
 
