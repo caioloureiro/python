@@ -51,11 +51,37 @@ input("Iniciando ex004...")
 valor = input("Digite algo: ")
 
 print(f"O tipo primitivo desse valor é {type(valor)}")
-print(f"É numérico? {valor.isnumeric()}")
-print(f"É letra? {valor.isalpha()}")
-print(f"É alfanumérico? {valor.isalnum()}")
-print(f"É maiúsculo? {valor.isupper()}")
-print(f"É minúsculo? {valor.islower()}")
-print(f"Está capitalizado? {valor.istitle()}")
+
+if valor.isspace():
+    print(f"Só tem espaços? {valor.isspace()}")
+
+if valor.isnumeric():
+	print(f"É numérico? {valor.isnumeric()}")
+	
+if valor.isalpha():
+	print(f"É letra? {valor.isalpha()}")
+
+if valor.isalnum():
+	print(f"É alfanumérico? {valor.isalnum()}")
+
+if valor.isupper():
+	print(f"É maiúsculo? {valor.isupper()}")
+
+if valor.islower():
+	print(f"É minúsculo? {valor.islower()}")
+
+if valor.istitle():
+	print(f"Está capitalizado? {valor.istitle()}")
+
+mudarTela()
+
+# Exercício Python 005
+# Antecessor e sucessor
+input("Iniciando ex005...")
+
+n = int(input("Digite um número: "))
+print(f"Analisando o valor {n}")
+print(f"Seu antecessor é {n-1}")
+print(f"Seu sucessor é {n+1}")
 
 mudarTela()
