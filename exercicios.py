@@ -14,7 +14,6 @@ msg = "Olá, Mundo!"
 print(msg)
 
 espere = input("Pressione Enter para continuar...")
-
 limparTela()
 
 # Exercício Python 002
@@ -29,7 +28,6 @@ nome = input("Digite seu nome: ")
 print(f"Olá {nome}! Prazer em te conhecer!")
 
 espere = input("Pressione Enter para continuar...")
-
 limparTela()
 
 # Exercício Python 003
