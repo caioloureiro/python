@@ -172,16 +172,16 @@ espacos()
 try:
     n = int(input("Digite um número para ver sua tabuada: "))
     print(f"Tabuada de {n}:")
-    print(f"{n} x 1 = {n*1}")
-    print(f"{n} x 2 = {n*2}")
-    print(f"{n} x 3 = {n*3}")
-    print(f"{n} x 4 = {n*4}")
-    print(f"{n} x 5 = {n*5}")
-    print(f"{n} x 6 = {n*6}")
-    print(f"{n} x 7 = {n*7}")
-    print(f"{n} x 8 = {n*8}")
-    print(f"{n} x 9 = {n*9}")
-    print(f"{n} x 10 = {n*10}")
+    print(f"{n} x {1:2} = {n*1:2}")
+    print(f"{n} x {2:2} = {n*2:2}")
+    print(f"{n} x {3:2} = {n*3:2}")
+    print(f"{n} x {4:2} = {n*4:2}")
+    print(f"{n} x {5:2} = {n*5:2}")
+    print(f"{n} x {6:2} = {n*6:2}")
+    print(f"{n} x {7:2} = {n*7:2}")
+    print(f"{n} x {8:2} = {n*8:2}")
+    print(f"{n} x {9:2} = {n*9:2}")
+    print(f"{n} x {10:2} = {n*10:2}")
 except ValueError:
     print("Erro: digite apenas números inteiros.")
 
@@ -192,12 +192,34 @@ print("Conversor de moedas")
 espacos()
 
 dolar = buscar_dolar()
-if dolar is not None:
+if dolar is not None: # Se a cotação foi obtida com sucesso, continue com o programa
     try:
         reais = float(input("Digite um valor em reais: "))
         convertido = reais / dolar
         print(f"Com R${reais:.2f} você pode comprar US${convertido:.2f} (cotação: R${dolar:.2f}).")
+
+        mudarTela()
+
+        dolares = float(input("Digite um valor em dólares: "))
+        convertido_reais = dolares * dolar
+        print(f"Com US${dolares:.2f} você pode comprar R${convertido_reais:.2f} (cotação: R${dolar:.2f}).")
     except ValueError:
         print("Erro: digite apenas números.")
+
+mudarTela()
+
+print("Exercício Python 011")
+print("Pintando paredes")
+espacos()
+
+try:
+	largura = float(input("Digite a largura da parede em metros: "))
+	altura = float(input("Digite a altura da parede em metros: "))
+	area = largura * altura
+	tinta = area / 2
+	print(f"A área da parede é {area:.2f} m².")
+	print(f"Você precisará de {tinta:.2f} litros de tinta para pintar a parede.")
+except ValueError:
+	print("Erro: digite apenas números.")
 
 fim()
