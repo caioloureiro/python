@@ -217,6 +217,7 @@ try:
 	altura = float(input("Digite a altura da parede em metros: "))
 	area = largura * altura
 	tinta = area / 2
+	print(f"Sua parede tem {largura:.2f}x{altura:.2f} metros.")
 	print(f"A área da parede é {area:.2f} m².")
 	print(f"Você precisará de {tinta:.2f} litros de tinta para pintar a parede.")
 except ValueError:
