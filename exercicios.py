@@ -33,7 +33,29 @@ print(f"Olá {nome}! Prazer em te conhecer!")
 mudarTela()
 
 # Exercício Python 003
-# Crie um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas de acordo com o valor digitado.
+# Somando dois números
 input("Iniciando ex003...")
 
-input("Pressione Enter para continuar...")
+n1 = int(input("Digite o primeiro número: "))
+n2 = int(input("Digite o segundo número: "))
+
+soma = n1 + n2
+print(f"A soma entre {n1} e {n2} é {soma}.")
+
+mudarTela()
+
+# Exercício Python 004
+# Dissecando uma variável
+input("Iniciando ex004...")
+
+valor = input("Digite algo: ")
+
+print(f"O tipo primitivo desse valor é {type(valor)}")
+print(f"É numérico? {valor.isnumeric()}")
+print(f"É letra? {valor.isalpha()}")
+print(f"É alfanumérico? {valor.isalnum()}")
+print(f"É maiúsculo? {valor.isupper()}")
+print(f"É minúsculo? {valor.islower()}")
+print(f"Está capitalizado? {valor.istitle()}")
+
+mudarTela()
