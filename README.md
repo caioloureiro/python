@@ -1,32 +1,47 @@
 # Curso de Python
 
-Repositório de exercícios e desafios do curso de Python.
+Repositório de exercícios e desafios do curso de Python com interface interativa e síntese de fala.
 
 ## Arquivos
 
 ### exercicios.py
 
-Menu interativo com 15 exercícios de Python. O programa exibe uma lista de exercícios e permite ao usuário escolher qual deseja executar:
+Menu interativo com 21 exercícios de Python, com síntese de fala (pyttsx3) integrada. O programa exibe uma lista de exercícios e permite ao usuário escolher qual deseja executar.
 
-1. **Exercício 001** — Escreva "Olá, Mundo!" na tela
-2. **Exercício 002** — Leia o nome e exiba uma mensagem de boas-vindas
-3. **Exercício 003** — Leia dois números e calcule a soma
-4. **Exercício 004** — Leia um valor e mostre seu tipo primitivo e informações
-5. **Exercício 005** — Leia um número e mostre antecessor e sucessor
-6. **Exercício 006** — Leia um número e calcule dobro, triplo e raiz quadrada
-7. **Exercício 007** — Leia duas notas e calcule a média
-8. **Exercício 008** — Converta metros em centímetros e milímetros
-9. **Exercício 009** — Exiba a tabuada de um número
-10. **Exercício 010** — Converta reais em dólares (com cotação em tempo real)
-11. **Exercício 011** — Calcule área de parede e tinta necessária
-12. **Exercício 012** — Aplique desconto a um produto
-13. **Exercício 013** — Calcule novo salário com aumento
-14. **Exercício 014** — Converta temperatura de °C para °F
-15. **Exercício 015** — Calcule preço de aluguel de carro
+**Funcionalidades:**
+
+- ✅ **Síntese de fala** — Cada exercício é narrado em áudio
+- ✅ **Alt+Enter** — Ativa tela cheia ao abrir
+- ✅ **ESC na tela inicial** — Pressione para sair do programa
+- ✅ **Código padronizado** — Usa variáveis de texto para evitar repetição
+
+**Exercícios (001-021):**
+
+1. Escreva "Olá, Mundo!" na tela
+2. Mensagem de boas-vindas personalizada
+3. Soma de dois números
+4. Análise de tipo primitivo e propriedades
+5. Antecessor e sucessor de um número
+6. Dobro, triplo e raiz quadrada
+7. Média de notas com aprovação/reprovação
+8. Conversão de metros em centímetros e milímetros
+9. Tabuada de um número
+10. Conversão de reais em dólares (cotação em tempo real)
+11. Cálculo de cor e tinta para parede
+12. Desconto em produto
+13. Aumento de salário
+14. Conversão de temperatura °C ↔ °F
+15. Cálculo de aluguel de carro
+16. Porção inteira de número
+17. Cálculo de hipotenusa
+18. Seno, cosseno e tangente de ângulo
+19. Sorteio de aluno para apagar quadro
+20. Sorteio de ordem de apresentação
+21. Reprodução de arquivo MP3
 
 ### video05.py
 
-Exemplo básico de entrada de dados com `input()` e formatação de saída com f-strings. Lê nome, idade e peso do usuário e exibe uma mensagem personalizada.
+Exemplo básico de entrada de dados com `input()` e formatação de saída com f-strings.
 
 ### video05-desafio01.py
 
@@ -36,41 +51,60 @@ Lê o nome do usuário e exibe uma mensagem de boas-vindas personalizada.
 ### video05-desafio02.py
 
 **Desafio 2 — Data de nascimento formatada**
-Lê nome, dia, mês e ano de nascimento e exibe a data formatada com zeros à esquerda (`{dia:02d}`).
+Lê nome, dia, mês e ano de nascimento e exibe a data formatada.
 
 ### video05-desafio03.py
 
 **Desafio 3 — Soma com tratamento de erro**
-Lê dois números e exibe a soma. Utiliza `try/except ValueError` para tratar entradas inválidas sem interromper o programa.
+Lê dois números e exibe a soma com tratamento de exceções.
+
+## Dependências instaladas
+
+```bash
+pip install requests
+pip install pyttsx3
+pip install pyautogui
+pip install pygame
+pip install emoji
+pip install keyboard
+```
 
 ## Conceitos abordados
 
 - Entrada de dados com `input()`
 - Conversão de tipos: `int()`, `float()`, `str()`
-- Formatação de strings com f-strings
-- Formatação numérica com especificadores (`:02d`, `:2f`)
+- Formatação de strings com f-strings e variáveis
 - Tratamento de exceções com `try/except`
-- Requisições HTTP com `requests` (cotação de moedas)
-- Funções e modularização do código
+- Requisições HTTP com `requests` (cotação em tempo real)
+- Síntese de fala com `pyttsx3`
+- Automação com `pyautogui` e `keyboard`
+- Funções e modularização
+- Threading para monitorar teclas
 - Indentação com TABs (tamanho 4)
-- Estruturas condicionais (`if/elif/else`)
+- Estruturas condicionais e loops
 
 ## Configuração
 
 O projeto utiliza:
 
-- **Editor Config** (`.editorconfig`) — Define padrão de indentação com TABs (tamanho 4)
-- **Pylance** (`pyrightconfig.json`) — Configuração de análise estática do código
+- **Editor Config** (`.editorconfig`) — TABs tamanho 4
+- **Pylance** (`pyrightconfig.json`) — Análise estática
 
 ## Como executar
 
 ```bash
+# Modo completo (tela cheia + som)
 python exercicios.py
-```
 
-Ou para exercícios específicos:
-
-```bash
+# Exercíciosespecíficos
 python video05.py
 python video05-desafio01.py
 ```
+
+## Controles
+
+| Tecla         | Ação                          |
+| ------------- | ----------------------------- |
+| **ESC**       | Sair (apenas na tela inicial) |
+| **Alt+Enter** | Tela cheia (ao abrir)         |
+| **Enter**     | Continuar/Próximo             |
