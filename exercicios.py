@@ -3,6 +3,7 @@ import os
 import requests
 import pyttsx3
 import pyautogui
+import math
 
 # Inicializa o motor de voz
 engine = pyttsx3.init()
@@ -594,8 +595,6 @@ if exercicio == "017":
 	print("Exercício Python 017")
 	print("Crie um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa.")
 	espacos()
-
-	import math
 
 	try:
 
