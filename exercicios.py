@@ -47,6 +47,12 @@ def fim2():
 	input(texto)
 	exit()
 
+def erroNum():
+	texto = "Erro: digite apenas números."
+	print(texto)
+	engine.say(texto)
+	fim()
+
 #Início do programa
 #Tela de seleção de exercícios
 print(""
@@ -76,10 +82,7 @@ engine.runAndWait()
 exercicio = input(texto)
 
 if not exercicio.isdigit():
-	texto = "Exercício inválido. Digite apenas números."
-	print(texto)
-	engine.say(texto)
-	fim()
+	erroNum()
 	exit()
 
 if exercicio == "001":
@@ -101,9 +104,9 @@ if exercicio == "002":
 	print("Crie um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas.")
 	espacos()
 
-	engine.say("Digite o seu nome")
-
-	nome = input("Digite seu nome: ")
+	texto = "Digite o seu nome: "
+	engine.say(texto)
+	nome = input(texto)
 
 	texto = f"Olá {nome}! Prazer em te conhecer!"
 	print(texto)
@@ -139,10 +142,7 @@ if exercicio == "003":
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números inteiros."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "004":
 	limparTela()
@@ -228,10 +228,7 @@ if exercicio == "005":
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números inteiros."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "006":
 	limparTela()
@@ -260,10 +257,7 @@ if exercicio == "006":
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números inteiros."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "007":
 	limparTela()
@@ -300,10 +294,7 @@ if exercicio == "007":
 		fim()
 		
 	except ValueError:
-		texto = "Erro: digite apenas números."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "008":
 	limparTela()
@@ -322,10 +313,7 @@ if exercicio == "008":
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "009":
 	limparTela()
@@ -349,10 +337,7 @@ if exercicio == "009":
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números inteiros."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "010":
 	limparTela()
@@ -403,10 +388,7 @@ if exercicio == "010":
 			fim()
 
 		except ValueError:
-			texto = "Erro: digite apenas números."
-			print(texto)
-			engine.say(texto)
-			fim()
+			erroNum()
 
 if exercicio == "011":
 	limparTela()
@@ -417,37 +399,35 @@ if exercicio == "011":
 
 	try:
 
-		engine.say("Digite a largura da parede em metros")
-
-		largura = float(input("Digite a largura da parede em metros: "))
+		texto = "Digite a largura da parede em metros: "
+		engine.say(texto)
+		largura = float(input(texto))
 
 		pause()
 
-		engine.say("Digite a altura da parede em metros")
-
-		altura = float(input("Digite a altura da parede em metros: "))
+		texto = "Digite a altura da parede em metros: "
+		engine.say(texto)
+		altura = float(input(texto))
 
 		area = largura * altura
 		tinta = area / 2
 
 		texto1 = f"Sua parede tem {largura:.2f}x{altura:.2f} metros."
 		print(texto1)
-		engine.say(f"Sua parede tem {largura:.2f} por {altura:.2f} metros.")
+		engine.say(texto1)
 
 		texto2 = f"A área da parede é {area:.2f} m²."
 		print(texto2)
-		engine.say(f"A área da parede é {area:.2f} metros quadrados.")
+		engine.say(texto2)
 
 		texto3 = f"Você precisará de {tinta:.2f} litros de tinta para pintar a parede."
 		print(texto3)
 		engine.say(texto3)
+
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "012":
 	limparTela()
@@ -458,15 +438,15 @@ if exercicio == "012":
 
 	try:
 
-		engine.say("Digite o preço do produto")
-
-		preco = float(input("Digite o preço do produto: R$ "))
+		texto = "Digite o preço do produto: "
+		engine.say(texto)
+		preco = float(input(texto))
 
 		pause()
 
-		engine.say("Digite a porcentagem de desconto")
-
-		desconto = float(input("Digite a porcentagem de desconto: "))
+		texto = "Digite a porcentagem de desconto: "
+		engine.say(texto)
+		desconto = float(input(texto))
 	
 		preco_desconto = (preco * desconto / 100)
 		valor_final = preco - preco_desconto
@@ -478,10 +458,7 @@ if exercicio == "012":
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "013":
 	limparTela()
@@ -492,15 +469,14 @@ if exercicio == "013":
 
 	try:
 
-		engine.say("Digite o salário do funcionário")
-
-		salario = float(input("Digite o salário do funcionário: R$"))
+		texto = "Digite o salário do funcionário: R$ "
+		engine.say(texto)
+		salario = float(input(texto))
 
 		pause()
-
-		engine.say("Digite a porcentagem de aumento")
-
-		aumento = float(input("Digite a porcentagem de aumento: "))
+		texto = "Digite a porcentagem de aumento: "
+		engine.say(texto)
+		aumento = float(input(texto))
 		
 		salario_aumento = (salario * aumento / 100)
 		novo_salario = salario + salario_aumento
@@ -511,10 +487,7 @@ if exercicio == "013":
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "014":
 	limparTela()
@@ -525,34 +498,33 @@ if exercicio == "014":
 
 	try:
 
-		engine.say("Digite a temperatura em Celsius:")
+		texto = "Digite a temperatura em Celsius: "
+		engine.say(texto)
+		celsius = float(input(texto))
 
-		celsius = float(input("Digite a temperatura em °C: "))
 		fahrenheit = (celsius * 9/5) + 32
 		
 		texto1 = f"{celsius:.2f}°C equivalem a {fahrenheit:.2f}°F."
 		print(texto1)
-		engine.say(f"{celsius:.2f} graus Celsius equivalem a {fahrenheit:.2f} graus Fahrenheit.")
+		engine.say(texto1)
 
 		pause()
 
 		limparTela()
 
-		engine.say("Digite a temperatura em Fahrenheit:")
+		texto = "Digite a temperatura em Fahrenheit: "
+		engine.say(texto)
+		fahrenheit = float(input(texto))
 
-		fahrenheit = float(input("Digite a temperatura em °F: "))
 		celsius = (fahrenheit - 32) * 5/9
 
 		texto2 = f"{fahrenheit:.2f}°F equivalem a {celsius:.2f}°C."
 		print(texto2)
-		engine.say(f"{fahrenheit:.2f} graus Fahrenheit equivalem a {celsius:.2f} graus Celsius.")
+		engine.say(texto2)
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "015":
 	limparTela()
@@ -563,15 +535,15 @@ if exercicio == "015":
 
 	try:
 
-		engine.say("Digite a quantidade de quilômetros percorridos")
-
-		km = float(input("Digite a quantidade de quilômetros percorridos: "))
+		texto = "Digite a quantidade de quilômetros percorridos: "
+		engine.say(texto)
+		km = float(input(texto))
 
 		pause()
 
-		engine.say("Digite a quantidade de dias alugados")
-
-		dias = int(input("Digite a quantidade de dias alugados: "))
+		texto = "Digite a quantidade de dias alugados: "
+		engine.say(texto)
+		dias = int(input(texto))
 
 		preco_km = km * 0.15
 		preco_dias = dias * 60
@@ -583,10 +555,7 @@ if exercicio == "015":
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "016":
 	limparTela()
@@ -599,11 +568,11 @@ if exercicio == "016":
 
 	try:
 
-		engine.say("Digite um número")
+		texto = "Digite um número: "
+		engine.say(texto)
+		num = float(input(texto))
 
-		num = float(input("Digite um número: "))
-
-		texto1 = f"A porção inteira de {num} é {math.trunc(num)}."
+		texto1 = f"A porção inteira (trunc) de {num} é {math.trunc(num)}."
 		print(texto1)
 		engine.say(texto1)
 
@@ -611,16 +580,13 @@ if exercicio == "016":
 
 		limparTela()
 
-		texto2 = f"A porção inteira de {num} é {int(num)}."
+		texto2 = f"A porção inteira (int) de {num} é {int(num)}."
 		print(texto2)
 		engine.say(texto2)
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
 
 if exercicio == "017":
 	limparTela()
@@ -633,15 +599,15 @@ if exercicio == "017":
 
 	try:
 
-		engine.say("Digite o comprimento do cateto oposto")
-
-		cat_oposto = float(input("Digite o comprimento do cateto oposto: "))
+		texto = "Digite o comprimento do cateto oposto: "
+		engine.say(texto)
+		cat_oposto = float(input(texto))
 
 		pause()
 
-		engine.say("Digite o comprimento do cateto adjacente")
-
-		cat_adjacente = float(input("Digite o comprimento do cateto adjacente: "))
+		texto = "Digite o comprimento do cateto adjacente: "
+		engine.say(texto)
+		cat_adjacente = float(input(texto))
 
 		hipotenusa = math.hypot(cat_oposto, cat_adjacente)
 
@@ -651,7 +617,4 @@ if exercicio == "017":
 		fim()
 
 	except ValueError:
-		texto = "Erro: digite apenas números."
-		print(texto)
-		engine.say(texto)
-		fim()
+		erroNum()
