@@ -4,6 +4,7 @@ import requests
 import pyttsx3
 import pyautogui
 import math
+import random
 
 # Inicializa o motor de voz
 engine = pyttsx3.init()
@@ -654,3 +655,91 @@ if exercicio == "018":
 
 	except ValueError:
 		erroNum()
+
+if exercicio == "019":
+	limparTela()
+
+	print("Exercício Python 019")
+	print("Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.")
+	espacos()
+
+	try:
+
+		alunos = []
+		for i in range(4):
+			texto = f"Digite o nome do aluno {i+1}: "
+			engine.say(texto)
+			aluno = input(texto)
+			alunos.append(aluno)
+
+		escolhido = random.choice(alunos)
+
+		texto = f"O aluno escolhido para apagar o quadro é: {escolhido}."
+		print(texto)
+		engine.say(texto)
+		fim()
+
+	except ValueError:
+		erroNum()
+
+if exercicio == "020":
+	limparTela()
+
+	print("Exercício Python 020")
+	print("O mesmo professor do exercício anterior quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.")
+	espacos()
+
+	try:
+
+		alunos = []
+		for i in range(4):
+			texto = f"Digite o nome do aluno {i+1}: "
+			engine.say(texto)
+			aluno = input(texto)
+			alunos.append(aluno)
+
+		random.shuffle(alunos)
+
+		texto = "A ordem de apresentação dos trabalhos será:"
+		print(texto)
+		engine.say(texto)
+
+		for i, aluno in enumerate(alunos, start=1):
+			texto_linha = f"{i}º - {aluno}"
+			print(texto_linha)
+			engine.say(texto_linha)
+
+		fim()
+
+	except ValueError:
+		erroNum()
+
+if exercicio == "021":
+	limparTela()
+
+	print("Exercício Python 021")
+	print("Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3.")
+	espacos()
+
+	try:
+
+		texto = "Digite o caminho do arquivo MP3: "
+		engine.say(texto)
+		caminho_mp3 = input(texto)
+
+		if os.path.isfile(caminho_mp3) and caminho_mp3.lower().endswith('.mp3'):
+			engine.say(f"Reproduzindo {caminho_mp3}")
+			engine.runAndWait()
+			os.startfile(caminho_mp3)
+			fim()
+		else:
+			texto = "Erro: arquivo não encontrado ou formato inválido. Certifique-se de digitar o caminho correto de um arquivo MP3."
+			print(texto)
+			engine.say(texto)
+			fim()
+
+	except Exception as e:
+		texto = f"Erro ao tentar reproduzir o áudio: {e}"
+		print(texto)
+		engine.say(texto)
+		fim()
