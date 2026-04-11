@@ -75,6 +75,7 @@ print(""
 "015 - Escreva um programa que pergunte a quantidade de quilômetros percorridos por um carro alugado e a quantidade de dias pelos quais ele foi alugado. Calcule o preço a pagar, sabendo que o carro custa R$60 por dia e R$0,15 por km rodado.\n" \
 "016 - Crie um programa que leia um número qualquer pelo teclado e mostre na tela a sua porção inteira.\n" \
 "017 - Crie um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa.\n"
+"018 - Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.\n"
 "")
 
 texto = "Digite o número do exercício que deseja executar: "
@@ -613,6 +614,42 @@ if exercicio == "017":
 		texto = f"A hipotenusa vai medir {hipotenusa:.2f}."
 		print(texto)
 		engine.say(texto)
+		fim()
+
+	except ValueError:
+		erroNum()
+
+if exercicio == "018":
+	limparTela()
+
+	print("Exercício Python 018")
+	print("Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.")
+	espacos()
+
+	try:
+
+		texto = "Digite um ângulo em graus: "
+		engine.say(texto)
+		angulo_graus = float(input(texto))
+
+		angulo_radianos = math.radians(angulo_graus)
+
+		seno = math.sin(angulo_radianos)
+		cosseno = math.cos(angulo_radianos)
+		tangente = math.tan(angulo_radianos)
+
+		texto1 = f"O seno de {angulo_graus:.2f}° é {seno:.2f}."
+		print(texto1)
+		engine.say(texto1)
+
+		texto2 = f"O cosseno de {angulo_graus:.2f}° é {cosseno:.2f}."
+		print(texto2)
+		engine.say(texto2)
+
+		texto3 = f"A tangente de {angulo_graus:.2f}° é {tangente:.2f}."
+		print(texto3)
+		engine.say(texto3)
+
 		fim()
 
 	except ValueError:
