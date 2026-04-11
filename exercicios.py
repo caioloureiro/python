@@ -3,8 +3,10 @@ import os
 import requests
 import pyttsx3
 import pyautogui
+import keyboard
 import math
 import random
+import threading
 
 # Inicializa o motor de voz
 engine = pyttsx3.init()
@@ -14,6 +16,21 @@ engine.setProperty('rate', 255)
 
 # No Windows, envia o comando de tela cheia
 pyautogui.hotkey('alt', 'enter')
+
+# Flag para controlar ESC apenas na tela inicial
+esc_pressionado_inicial = False
+monitorando_esc = True
+
+def aguardar_esc_inicial():
+	"""Aguarda ESC pressionado e sai"""
+	global esc_pressionado_inicial, monitorando_esc
+	while monitorando_esc:
+		if keyboard.is_pressed('esc'):
+			esc_pressionado_inicial = True
+			os._exit(0)
+		else:
+			import time
+			time.sleep(0.1)
 
 def limparTela():
 	print("'nt' refere-se ao Windows, 'posix' ao Linux/Mac")
@@ -77,13 +94,28 @@ print(""
 "016 - Crie um programa que leia um número qualquer pelo teclado e mostre na tela a sua porção inteira.\n" \
 "017 - Crie um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa.\n"
 "018 - Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.\n"
+"019 - Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.\n" \
+"020 - O mesmo professor do exercício anterior quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.\n" \
+"021 - Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3.\n"
+"\n" \
+"Pressione ESC para sair.\n\n"
 "")
 
 texto = "Digite o número do exercício que deseja executar: "
-engine.say(texto)
+engine.say(f"{texto} ou pressione ESC para sair.")
 engine.runAndWait()
+
+# Inicia thread para detectar ESC na tela inicial
+thread_esc = threading.Thread(target=aguardar_esc_inicial)
+thread_esc.daemon = True
+thread_esc.start()
+
 exercicio = input(texto)
 
+# Para de monitorar ESC após sair da tela inicial
+monitorando_esc = False
+
+# Se ESC foi pressionado, a thread já saiu. Caso contrário, continua normalmente:
 if not exercicio.isdigit():
 	erroNum()
 	exit()
