@@ -1,5 +1,4 @@
 # EXERCÍCIOS PYTHON - CURSO EM VÍDEO
-
 import os
 import requests
 import pyttsx3
@@ -33,8 +32,10 @@ def fim():
 	engine.runAndWait()
 	input("\n\nPressione Enter para finalizar...")
 
-print("Bem-vindo aos exercícios de Python!")
+#Início do programa
+#Tela de seleção de exercícios
 print(""
+"Bem-vindo aos exercícios de Python!\n" \
 "001 - Escreva 'Olá, Mundo!' na tela.\n" \
 "002 - Crie um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas.\n" \
 "003 - Crie um programa que leia dois números e mostre a soma entre eles.\n" \
