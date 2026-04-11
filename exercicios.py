@@ -29,6 +29,11 @@ def pause():
 	engine.runAndWait()
 	input(texto)
 
+def pause2():
+	texto = "Pressione Enter para continuar..."
+	engine.say(texto)
+	input(texto)
+
 def fim():
 	texto = "Pressione Enter para finalizar..."
 	engine.say(texto)
@@ -151,39 +156,45 @@ if exercicio == "004":
 	engine.say(texto)
 	valor = input(texto)
 
-	engine.say(valor)
-
-	print(f"O tipo primitivo desse valor é {type(valor)}")
-
-	engine.say(f"O tipo primitivo desse valor é {type(valor)}")
+	texto = f"Você digitou: {valor}"
+	print(texto)
+	engine.say(texto)
+	pause()
 
 	if valor.isspace():
 		print(f"Só tem espaços? {valor.isspace()}")
 		engine.say("Só tem espaços")
+		pause()
 
 	if valor.isnumeric():
 		print(f"É numérico? {valor.isnumeric()}")
 		engine.say("É numérico")
+		pause()
 
 	if valor.isalpha():
 		print(f"É letra? {valor.isalpha()}")
 		engine.say("É letra")
+		pause()
 
 	if valor.isalnum():
 		print(f"É alfanumérico? {valor.isalnum()}")
 		engine.say("É alfanumérico")
+		pause()
 
 	if valor.isupper():
 		print(f"É maiúsculo? {valor.isupper()}")
 		engine.say("É maiúsculo")
+		pause()
 
 	if valor.islower():
 		print(f"É minúsculo? {valor.islower()}")
 		engine.say("É minúsculo")
+		pause()
 
 	if valor.istitle():
 		print(f"Está capitalizado? {valor.istitle()}")
 		engine.say("Está capitalizado")
+		pause()
 	
 	fim2()
 
@@ -214,7 +225,6 @@ if exercicio == "005":
 		print(texto3)
 		engine.say(texto3)
 
-		pause()
 		fim()
 
 	except ValueError:
@@ -246,7 +256,8 @@ if exercicio == "006":
 		texto3 = f"A raiz quadrada de {n} é {n**0.5:.2f}"
 		print(texto3)
 		engine.say(texto3)
-		pause()
+
+		fim()
 
 	except ValueError:
 		texto = "Erro: digite apenas números inteiros."
@@ -329,9 +340,11 @@ if exercicio == "009":
 		texto = f"Tabuada de {n}:"
 		print(texto)
 
-		for i in range(1, 11):
+		for i in range(1, 101):
 			texto_linha = f"{n} x {i:2} = {n*i:2}"
 			print(texto_linha)
+
+		engine.say(f"Tabuada exibida na tela.")
 
 		fim()
 
