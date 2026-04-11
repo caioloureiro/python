@@ -36,6 +36,12 @@ def fim():
 	input(texto)
 	exit()
 
+def fim2():
+	texto = "Pressione Enter para finalizar..."
+	engine.say(texto)
+	input(texto)
+	exit()
+
 #Início do programa
 #Tela de seleção de exercícios
 print(""
@@ -152,34 +158,34 @@ if exercicio == "004":
 	engine.say(f"O tipo primitivo desse valor é {type(valor)}")
 
 	if valor.isspace():
-		engine.say("Só tem espaços")
 		print(f"Só tem espaços? {valor.isspace()}")
+		engine.say("Só tem espaços")
 
 	if valor.isnumeric():
-		engine.say("É numérico")
 		print(f"É numérico? {valor.isnumeric()}")
+		engine.say("É numérico")
 
 	if valor.isalpha():
-		engine.say("É letra")
 		print(f"É letra? {valor.isalpha()}")
+		engine.say("É letra")
 
 	if valor.isalnum():
-		engine.say("É alfanumérico")
 		print(f"É alfanumérico? {valor.isalnum()}")
+		engine.say("É alfanumérico")
 
 	if valor.isupper():
-		engine.say("É maiúsculo")
 		print(f"É maiúsculo? {valor.isupper()}")
+		engine.say("É maiúsculo")
 
 	if valor.islower():
-		engine.say("É minúsculo")
 		print(f"É minúsculo? {valor.islower()}")
+		engine.say("É minúsculo")
 
 	if valor.istitle():
-		engine.say("Está capitalizado")
 		print(f"Está capitalizado? {valor.istitle()}")
+		engine.say("Está capitalizado")
 	
-	fim()
+	fim2()
 
 if exercicio == "005":
 	limparTela()
@@ -208,6 +214,7 @@ if exercicio == "005":
 		print(texto3)
 		engine.say(texto3)
 
+		pause()
 		fim()
 
 	except ValueError:
@@ -239,7 +246,7 @@ if exercicio == "006":
 		texto3 = f"A raiz quadrada de {n} é {n**0.5:.2f}"
 		print(texto3)
 		engine.say(texto3)
-		fim()
+		pause()
 
 	except ValueError:
 		texto = "Erro: digite apenas números inteiros."
