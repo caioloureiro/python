@@ -1,4 +1,4 @@
-# Video 09 - Tipagem de dados e formatação de strings
+# Aula 06 - Tipagem de dados e formatação de strings
 # Sobre print f-strings
 # As f-strings facilitam muito a formatação de números e datas, que são as "máscaras" propriamente ditas:
 # Objetivo	Código com f-string	Resultado (Exemplo)

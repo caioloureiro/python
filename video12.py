@@ -1,4 +1,4 @@
-# Video 12 - Operações Aritméticas e funções matemáticas
+# Aula 07 - Operações Aritméticas e funções matemáticas
 import os
 
 def limparTela():
