@@ -4,7 +4,7 @@ import os
 downloads = r"D:\Downloads"
 sites = r"D:\Sites"
 firefox = r"C:\Program Files\Mozilla Firefox\firefox.exe"
-onedrive = r"C:\Users\Usuario\OneDrive"
+onedrive = r"C:\Users\Caio\OneDrive"
 filezilla = r"C:\Program Files\FileZilla FTP Client\filezilla.exe"
 
 os.startfile(downloads)
