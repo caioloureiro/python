@@ -1,5 +1,6 @@
 # Diretórios Python
 __pycache__/
+exercicios/__pycache__/
 *.py[cod]
 *$py.class
 
