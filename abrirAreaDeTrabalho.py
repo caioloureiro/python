@@ -1,4 +1,6 @@
 import os
+import webbrowser
+
 
 # Opção com 'r' (raw string) - mais fácil
 downloads = r"D:\Downloads"
@@ -13,3 +15,4 @@ os.startfile(sites)
 os.startfile(firefox)
 os.startfile(onedrive)
 os.startfile(filezilla)
+webbrowser.open("https://web.whatsapp.com/")
