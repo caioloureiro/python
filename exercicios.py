@@ -77,10 +77,10 @@ while True:
 
 	# Importa e executa o exercício selecionado
 	try:
-		if exercicio == "001":
-			from exercicios import ex001
-			ex001.executar()
-		elif exercicio == "002":
+		if exercicio == "000":
+			from exercicios import ex000
+			ex000.executar()
+		elif exercicio == "001":
 			from exercicios import ex002
 			ex002.executar()
 		elif exercicio == "003":
