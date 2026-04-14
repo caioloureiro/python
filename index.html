@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Dados do Banco</title>
+		<style>
+			table {
+				border-collapse: collapse;
+				width: 50%;
+			}
+			th,
+			td {
+				border: 1px solid black;
+				padding: 8px;
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Lista de Itens do MySQL</h1>
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+			</tr>
+			{% for item in itens %}
+			<tr>
+				<td>{{ item.id }}</td>
+				<td>{{ item.nome }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
