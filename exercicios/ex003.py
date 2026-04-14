@@ -9,7 +9,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 003")
-	print("Crie um programa que leia dois números e mostre a soma entre eles.")
+	enunciado = "Crie um programa que leia dois números e mostre a soma entre eles."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	try:

@@ -1,5 +1,5 @@
 """Exercício Python 020: Sortear ordem de apresentação"""
-from .helpers import limparTela, espacos, fim, erroNum
+from .helpers import limparTela, espacos, fim, erroNum, pause
 import pyttsx3
 import random
 
@@ -10,7 +10,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 020")
-	print("O mesmo professor do exercício anterior quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.")
+	enunciado = "O mesmo professor do exercício anterior quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	try:

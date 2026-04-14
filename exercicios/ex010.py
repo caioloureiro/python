@@ -10,7 +10,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 010")
-	print("Crie um programa que leia um valor em reais e o converta para dólares.")
+	enunciado = "Crie um programa que leia um valor em reais e o converta para dólares."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	def buscar_dolar():

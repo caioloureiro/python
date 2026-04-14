@@ -5,6 +5,11 @@ import pyttsx3
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
+# Exceção customizada para voltar ao menu
+class VoltarAoMenu(Exception):
+	"""Exceção para sinalizar que deve voltar ao menu de exercícios"""
+	pass
+
 def limparTela():
 	"""Limpa a tela do console"""
 	print("'nt' refere-se ao Windows, 'posix' ao Linux/Mac")
@@ -30,14 +35,31 @@ def pause2():
 	input(texto)
 
 def fim():
-	"""Finaliza o programa com áudio"""
+	"""Volta ao menu com áudio"""
+	texto = "Pressione Enter para voltar ao menu..."
+	engine.say(texto)
+	engine.runAndWait()
+	input(texto)
+	limparTela()
+	raise VoltarAoMenu()
+
+def fim2():
+	"""Volta ao menu sem esperar áudio terminar"""
+	texto = "Pressione Enter para voltar ao menu..."
+	engine.say(texto)
+	input(texto)
+	limparTela()
+	raise VoltarAoMenu()
+
+def sair():
+	"""Finaliza o programa sem áudio"""
 	texto = "Pressione Enter para finalizar..."
 	engine.say(texto)
 	engine.runAndWait()
 	input(texto)
 	exit()
 
-def fim2():
+def sair2():
 	"""Finaliza o programa sem esperar áudio terminar"""
 	texto = "Pressione Enter para finalizar..."
 	engine.say(texto)

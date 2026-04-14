@@ -10,7 +10,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 017")
-	print("Crie um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa.")
+	enunciado = "Crie um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	try:

@@ -10,7 +10,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 016")
-	print("Crie um programa que leia um número qualquer pelo teclado e mostre na tela a sua porção inteira.")
+	enunciado = "Crie um programa que leia um número qualquer pelo teclado e mostre na tela a sua porção inteira."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	try:

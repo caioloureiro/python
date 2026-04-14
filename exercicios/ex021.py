@@ -1,5 +1,5 @@
 """Exercício Python 021: Reproduzir arquivo MP3"""
-from .helpers import limparTela, espacos, fim
+from .helpers import limparTela, espacos, fim, pause
 import pyttsx3
 import os
 
@@ -10,7 +10,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 021")
-	print("Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3.")
+	enunciado = "Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	try:

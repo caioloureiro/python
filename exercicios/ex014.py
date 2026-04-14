@@ -9,7 +9,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 014")
-	print("Crie um programa que converta uma temperatura digitada em °C e converta para °F.")
+	enunciado = "Crie um programa que converta uma temperatura digitada em Celsius e converta para Fahrenheit."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	try:

@@ -9,7 +9,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 002")
-	print("Crie um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas.")
+	enunciado = "Crie um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	texto = "Digite o seu nome: "

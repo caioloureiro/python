@@ -1,5 +1,5 @@
 """Exercício Python 001: Escreva 'Olá, Mundo!' na tela"""
-from .helpers import limparTela, espacos, fim
+from .helpers import limparTela, espacos, fim, pause
 import pyttsx3
 
 engine = pyttsx3.init()
@@ -9,7 +9,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 001")
-	print("Crie um programa que escreva 'Olá, Mundo!' na tela.")
+	enunciado = "Crie um programa que escreva 'Olá, Mundo!' na tela."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	texto = "Olá, Mundo!"

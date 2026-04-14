@@ -9,7 +9,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 004")
-	print("Crie um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo e todas as informações possíveis sobre ele.")
+	enunciado = "Crie um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo e todas as informações possíveis sobre ele."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	texto = "Digite algo: "

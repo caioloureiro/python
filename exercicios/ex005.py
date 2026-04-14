@@ -1,5 +1,5 @@
 """Exercício Python 005: Antecessor e sucessor"""
-from .helpers import limparTela, espacos, fim, erroNum
+from .helpers import limparTela, espacos, fim, erroNum, pause
 import pyttsx3
 
 engine = pyttsx3.init()
@@ -9,7 +9,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 005")
-	print("Crie um programa que leia um número e mostre o seu antecessor e o seu sucessor.")
+	enunciado = "Crie um programa que leia um número e mostre o seu antecessor e o seu sucessor."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	try:

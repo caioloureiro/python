@@ -1,5 +1,5 @@
 """Exercício Python 018: Seno, cosseno e tangente"""
-from .helpers import limparTela, espacos, fim, erroNum
+from .helpers import limparTela, espacos, fim, erroNum, pause
 import pyttsx3
 import math
 
@@ -10,7 +10,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 018")
-	print("Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.")
+	enunciado = "Crie um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	try:

@@ -1,5 +1,5 @@
 """Exercício Python 008: Conversão de metros"""
-from .helpers import limparTela, espacos, fim, erroNum
+from .helpers import limparTela, espacos, fim, erroNum, pause
 import pyttsx3
 
 engine = pyttsx3.init()
@@ -9,7 +9,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 008")
-	print("Crie um programa que leia um valor em metros e o exiba convertido em centímetros e milímetros.")
+	enunciado = "Crie um programa que leia um valor em metros e o exiba convertido em centímetros e milímetros."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	try:

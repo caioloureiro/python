@@ -9,7 +9,10 @@ def executar():
 	limparTela()
 
 	print("Exercício Python 007")
-	print("Crie um programa que leia duas notas de um aluno e mostre a sua média.")
+	enunciado = "Crie um programa que leia duas notas de um aluno e mostre a sua média."
+	print(enunciado)
+	engine.say(enunciado)
+	pause()
 	espacos()
 
 	try:
