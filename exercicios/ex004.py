@@ -1,12 +1,14 @@
 """Exercício Python 004: Informações sobre o tipo primitivo"""
 from .helpers import limparTela, espacos, pause, fim2
 import pyttsx3
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color 4')
 
 	print("Exercício Python 004")
 	enunciado = "Crie um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo e todas as informações possíveis sobre ele."

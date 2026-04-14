@@ -1,12 +1,14 @@
 """Exercício Python 008: Conversão de metros"""
 from .helpers import limparTela, espacos, fim, erroNum, pause
 import pyttsx3
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color 8')
 
 	print("Exercício Python 008")
 	enunciado = "Crie um programa que leia um valor em metros e o exiba convertido em centímetros e milímetros."

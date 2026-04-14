@@ -1,13 +1,14 @@
 """Exercício Python 007: Média entre duas notas"""
 from .helpers import limparTela, espacos, pause, fim, erroNum
 import pyttsx3
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-
+	os.system('color 7')
 	print("Exercício Python 007")
 	enunciado = "Crie um programa que leia duas notas de um aluno e mostre a sua média."
 	print(enunciado)

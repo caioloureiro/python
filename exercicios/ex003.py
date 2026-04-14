@@ -1,12 +1,14 @@
 """Exercício Python 003: Leia dois números e mostre a soma"""
 from .helpers import limparTela, espacos, pause, fim, erroNum
 import pyttsx3
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color 3')
 
 	print("Exercício Python 003")
 	enunciado = "Crie um programa que leia dois números e mostre a soma entre eles."

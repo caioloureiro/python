@@ -1,12 +1,14 @@
 """Exercício Python 009: Tabuada"""
 from .helpers import limparTela, espacos, fim, erroNum, pause
 import pyttsx3
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color 9')
 
 	print("Exercício Python 009")
 	enunciado = "Crie um programa que leia um número e mostre a sua tabuada."

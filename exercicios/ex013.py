@@ -1,12 +1,14 @@
 """Exercício Python 013: Aumento de salário"""
 from .helpers import limparTela, espacos, pause, fim, erroNum
 import pyttsx3
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color 4f')
 
 	print("Exercício Python 013")
 	enunciado = "Crie um programa que leia o salário de um funcionário e mostre seu novo salário, com 15% de aumento."

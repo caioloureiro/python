@@ -1,12 +1,14 @@
 """Exercício Python 002: Leia o nome e mostre boas-vindas"""
 from .helpers import limparTela, espacos, pause, fim
 import pyttsx3
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color 2')
 
 	print("Exercício Python 002")
 	enunciado = "Crie um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas."

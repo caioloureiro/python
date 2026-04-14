@@ -1,13 +1,14 @@
 """Exercício Python 006: Dobro, triplo e raiz quadrada"""
 from .helpers import limparTela, espacos, fim, erroNum, pause
 import pyttsx3
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-
+	os.system('color 6')
 	print("Exercício Python 006")
 	enunciado = "Crie um programa que leia um número e mostre o seu dobro, triplo e raiz quadrada."
 	print(enunciado)

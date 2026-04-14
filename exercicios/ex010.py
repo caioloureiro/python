@@ -2,12 +2,14 @@
 from .helpers import limparTela, espacos, pause, fim, erroNum
 import pyttsx3
 import requests
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color af')
 
 	print("Exercício Python 010")
 	enunciado = "Crie um programa que leia um valor em reais e o converta para dólares."

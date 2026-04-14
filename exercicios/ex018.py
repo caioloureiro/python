@@ -2,12 +2,14 @@
 from .helpers import limparTela, espacos, fim, erroNum, pause
 import pyttsx3
 import math
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color 9f')
 
 	print("Exercício Python 018")
 	enunciado = "Crie um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo."

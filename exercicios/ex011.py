@@ -1,12 +1,14 @@
 """Exercício Python 011: Cálculo de tinta para parede"""
 from .helpers import limparTela, espacos, pause, fim, erroNum
 import pyttsx3
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color 2f')
 
 	print("Exercício Python 011")
 	enunciado = "Crie um programa que leia a largura e a altura de uma parede em metros e calcule a sua área e a quantidade de tinta necessária para pintá-la."

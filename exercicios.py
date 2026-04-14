@@ -1,9 +1,10 @@
 # EXERCÍCIOS PYTHON - CURSO EM VÍDEO
 import os
+import sys
 import pyautogui
 import keyboard
-import threading
 import pyttsx3
+import time
 from exercicios.helpers import VoltarAoMenu
 
 # Inicializa o motor de voz
@@ -15,25 +16,19 @@ engine.setProperty('rate', 255)
 # No Windows, envia o comando de tela cheia
 pyautogui.hotkey('alt', 'enter')
 
-# Flag para controlar ESC apenas na tela inicial
-esc_pressionado_inicial = False
-monitorando_esc = True
+# Configurar hotkey para ESC - escreve "exit" e pressiona ENTER
+def sair_com_esc():
+	"""Função chamada quando ESC é pressionado"""
+	os.system('color 4')
+	pyautogui.typewrite('exit', interval=0)
+	keyboard.press('enter')
 
-def aguardar_esc_inicial():
-	"""Aguarda ESC pressionado e sai"""
-	global esc_pressionado_inicial, monitorando_esc
-	while monitorando_esc:
-		if keyboard.is_pressed('esc'):
-			esc_pressionado_inicial = True
-			os._exit(0)
-		else:
-			import time
-			time.sleep(0.1)
+keyboard.add_hotkey('esc', sair_com_esc)
 
 # Loop principal para voltar ao menu
-while True:	# Reseta a flag de monitoramento ESC para cada iteração
-	monitorando_esc = True
+while True:
 	#Tela de seleção de exercícios
+	os.system('color 0a')
 	print(""
 	"Bem-vindo aos exercícios de Python!\n" \
 	"001 - Escreva 'Olá, Mundo!' na tela.\n" \
@@ -65,17 +60,15 @@ while True:	# Reseta a flag de monitoramento ESC para cada iteração
 	engine.say(f"{texto} ou pressione ESC para sair.")
 	engine.runAndWait()
 
-	# Inicia thread para detectar ESC na tela inicial
-	thread_esc = threading.Thread(target=aguardar_esc_inicial)
-	thread_esc.daemon = True
-	thread_esc.start()
-
 	exercicio = input(texto)
 
-	# Para de monitorar ESC após sair da tela inicial
-	monitorando_esc = False
+	# Se ESC foi pressionado, a entrada será "exit"
+	if exercicio == "exit":
+		print("Até logo!")
+		time.sleep(1)
+		sys.exit(0)
 
-	# Se ESC foi pressionado, a thread já saiu. Caso contrário, continua normalmente:
+	# Se não for um número, mostra erro
 	if not exercicio.isdigit():
 		texto = "Erro: digite apenas números."
 		print(texto)

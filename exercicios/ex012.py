@@ -1,12 +1,14 @@
 """Exercício Python 012: Desconto"""
 from .helpers import limparTela, espacos, pause, fim, erroNum
 import pyttsx3
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color 3f')
 
 	print("Exercício Python 012")
 	enunciado = "Crie um programa que leia o preço de um produto e mostre seu novo preço, com 5% de desconto."

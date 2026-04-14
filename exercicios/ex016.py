@@ -2,12 +2,14 @@
 from .helpers import limparTela, espacos, pause, fim, erroNum
 import pyttsx3
 import math
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color 7f')
 
 	print("Exercício Python 016")
 	enunciado = "Crie um programa que leia um número qualquer pelo teclado e mostre na tela a sua porção inteira."

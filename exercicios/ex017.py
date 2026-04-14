@@ -2,12 +2,14 @@
 from .helpers import limparTela, espacos, pause, fim, erroNum
 import pyttsx3
 import math
+import os
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
+	os.system('color 8f')
 
 	print("Exercício Python 017")
 	enunciado = "Crie um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa."
