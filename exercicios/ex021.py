@@ -21,7 +21,7 @@ def executar():
 
 		texto = "Digite o caminho do arquivo MP3: "
 		engine.say(texto)
-		caminho_mp3 = input(texto)
+		caminho_mp3 = 'issets/sonic.mp3'
 
 		if os.path.isfile(caminho_mp3) and caminho_mp3.lower().endswith('.mp3'):
 			engine.say(f"Reproduzindo {caminho_mp3}")
