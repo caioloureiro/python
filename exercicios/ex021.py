@@ -2,6 +2,7 @@
 from .helpers import limparTela, espacos, fim, pause
 import pyttsx3
 import os
+import pygame
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 255)
@@ -19,9 +20,7 @@ def executar():
 
 	try:
 
-		texto = "Digite o caminho do arquivo MP3: "
-		engine.say(texto)
-		caminho_mp3 = 'issets/sonic.mp3'
+		caminho_mp3 = '/issets/sonic.mp3'
 
 		if os.path.isfile(caminho_mp3) and caminho_mp3.lower().endswith('.mp3'):
 			engine.say(f"Reproduzindo {caminho_mp3}")
