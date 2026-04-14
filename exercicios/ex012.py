@@ -8,7 +8,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color 3f')
+	os.system('color 7')
 
 	print("Exercício Python 012")
 	enunciado = "Crie um programa que leia o preço de um produto e mostre seu novo preço, com 5% de desconto."

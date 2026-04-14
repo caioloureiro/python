@@ -8,7 +8,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color 2f')
+	os.system('color 8')
 
 	print("Exercício Python 011")
 	enunciado = "Crie um programa que leia a largura e a altura de uma parede em metros e calcule a sua área e a quantidade de tinta necessária para pintá-la."

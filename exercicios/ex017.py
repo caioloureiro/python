@@ -9,7 +9,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color 8f')
+	os.system('color 2')
 
 	print("Exercício Python 017")
 	enunciado = "Crie um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa."

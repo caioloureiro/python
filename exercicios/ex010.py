@@ -9,7 +9,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color af')
+	os.system('color 9')
 
 	print("Exercício Python 010")
 	enunciado = "Crie um programa que leia um valor em reais e o converta para dólares."

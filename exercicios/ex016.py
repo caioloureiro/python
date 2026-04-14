@@ -9,7 +9,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color 7f')
+	os.system('color 3')
 
 	print("Exercício Python 016")
 	enunciado = "Crie um programa que leia um número qualquer pelo teclado e mostre na tela a sua porção inteira."

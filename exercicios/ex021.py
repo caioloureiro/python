@@ -8,7 +8,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color bf')
+	os.system('color 9')
 
 	print("Exercício Python 021")
 	enunciado = "Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3."

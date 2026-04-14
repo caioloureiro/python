@@ -9,7 +9,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color af')
+	os.system('color 2')
 
 	print("Exercício Python 019")
 	enunciado = "Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido."

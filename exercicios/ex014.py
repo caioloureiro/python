@@ -8,7 +8,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color 5f')
+	os.system('color 5')
 
 	print("Exercício Python 014")
 	enunciado = "Crie um programa que converta uma temperatura digitada em Celsius e converta para Fahrenheit."
