@@ -11,5 +11,5 @@ def executar():
 	os.system('color 0a')
 
 	os.system('curl parrot.live')
-	
+
 	pause()
