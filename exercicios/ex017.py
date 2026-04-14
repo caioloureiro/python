@@ -25,6 +25,7 @@ def executar():
 		engine.say(texto)
 		cat_adjacente = float(input(texto))
 
+		# hipotenusa = (cot_oposto ** 2 + cat_adjacente ** 2) ** (1/2)
 		hipotenusa = math.hypot(cat_oposto, cat_adjacente)
 
 		texto = f"A hipotenusa vai medir {hipotenusa:.2f}."
