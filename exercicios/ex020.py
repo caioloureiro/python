@@ -9,7 +9,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color bf')
+	os.system('color 9')
 
 	print("Exercício Python 020")
 	enunciado = "O mesmo professor do exercício anterior quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada."
@@ -39,6 +39,7 @@ def executar():
 			print(texto_linha)
 			engine.say(texto_linha)
 
+		print(alunos)
 		pause()
 		fim()
 
