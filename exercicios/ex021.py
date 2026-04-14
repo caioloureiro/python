@@ -18,23 +18,13 @@ def executar():
 	pause()
 	espacos()
 
-	try:
+	print('Executando o audio...')
 
-		caminho_mp3 = '/issets/sonic.mp3'
+	espacos()
 
-		if os.path.isfile(caminho_mp3) and caminho_mp3.lower().endswith('.mp3'):
-			engine.say(f"Reproduzindo {caminho_mp3}")
-			engine.runAndWait()
-			os.startfile(caminho_mp3)
-			fim()
-		else:
-			texto = "Erro: arquivo não encontrado ou formato inválido. Certifique-se de digitar o caminho correto de um arquivo MP3."
-			print(texto)
-			engine.say(texto)
-			fim()
-
-	except Exception as e:
-		texto = f"Erro ao tentar reproduzir o áudio: {e}"
-		print(texto)
-		engine.say(texto)
-		fim()
+	pygame.init()
+	pygame.mixer.music.load('issets/sonic.mp3')
+	pygame.mixer.music.play()
+	pygame.event.wait()
+	
+	fim()
