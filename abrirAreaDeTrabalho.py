@@ -1,5 +1,6 @@
 import os
 import webbrowser
+import time
 
 
 # Opção com 'r' (raw string) - mais fácil
@@ -16,4 +17,8 @@ os.startfile(firefox)
 os.startfile(onedrive)
 os.startfile(filezilla)
 webbrowser.open("https://web.whatsapp.com/")
+webbrowser.open("https://calendar.google.com/calendar/render?tab=wc&pli=1#main_7")
+
+time.sleep(30)
+
 webbrowser.open("http://localhost/")
