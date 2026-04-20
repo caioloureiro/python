@@ -12,3 +12,17 @@ ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."""
 )
 print(frase.count("o"))
+print(frase.upper().count("O"))
+print(len(frase.strip()))
+print(frase.replace("Python", "Android"))
+print(frase)
+print('Curso' in frase)
+print(frase.lower().find("vídeo"))
+print(frase.split())
+
+frase = frase.replace(" ", "-")
+print(frase)
+print(frase.split("-"))
+print(frase.split("-")[2][3])
+
+input()
