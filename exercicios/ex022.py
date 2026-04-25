@@ -8,7 +8,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color 2f')
+	os.system('color 0e')
 
 	print("Exercício Python 022")
 	enunciado = "Crie um programa que leia o nome completo de uma pessoa e mostre: o nome em maiúsculas, o nome em minúsculas, a quantidade de letras sem espaços e a quantidade de letras do primeiro nome."

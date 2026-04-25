@@ -8,7 +8,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color 6f')
+	os.system('color 0e')
 
 	print("Exercício Python 026")
 	enunciado = "Crie um programa que leia uma frase pelo teclado e mostre: quantas vezes aparece a letra 'A', em que posição ela aparece a primeira vez e em que posição ela aparece a última vez."

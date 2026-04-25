@@ -8,7 +8,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color 3f')
+	os.system('color 0e')
 
 	print("Exercício Python 023")
 	enunciado = "Faça um programa que leia um número de 0 a 9999 e mostre na tela cada um dos dígitos separados, ou seja, unidade, dezena, centena e milhar."

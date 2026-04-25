@@ -8,7 +8,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color 5f')
+	os.system('color 0e')
 
 	print("Exercício Python 025")
 	enunciado = "Crie um programa que leia o nome de uma pessoa e diga se ela tem 'SILVA' no nome."

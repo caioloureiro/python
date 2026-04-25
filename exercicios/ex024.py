@@ -8,7 +8,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color 4f')
+	os.system('color 0e')
 
 	print("Exercício Python 024")
 	enunciado = "Crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome 'SANTO'."

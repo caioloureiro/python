@@ -8,7 +8,7 @@ engine.setProperty('rate', 255)
 
 def executar():
 	limparTela()
-	os.system('color 7f')
+	os.system('color 0e')
 
 	print("Exercício Python 027")
 	enunciado = "Faça um programa que leia o nome completo de uma pessoa e mostre o primeiro e o último nome separadamente."
