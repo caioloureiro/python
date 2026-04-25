@@ -17,30 +17,36 @@ def executar():
 	pause()
 	espacos()
 	
-	nome = input("Digite o nome completo da pessoa: ")
+	nome = str(input("Digite o nome completo da pessoa: ")).strip()
 	engine.say(f"Você digitou: {nome}")
 	
 	nome_maiusculo = nome.upper()
 	nome_minusculo = nome.lower()
-	quantidade_letras = len(nome.replace(" ", ""))
+	nome_sem_espacos = nome.replace(" ", "")
+	quantidade_letras = len(nome_sem_espacos)
 	primeiro_nome = nome.split()[0]
 	quantidade_primeiro_nome = len(primeiro_nome)
 	
 	espacos()
-	print(f"Nome em MAIÚSCULAS: {nome_maiusculo}")
-	engine.say(f"Nome em maiúsculas: {nome_maiusculo}")
+
+	texto01 = f"Nome em MAIÚSCULAS: {nome_maiusculo}"
+	print(texto01)
+	engine.say(texto01)
 	espacos()
 	
-	print(f"Nome em minúsculas: {nome_minusculo}")
-	engine.say(f"Nome em minúsculas: {nome_minusculo}")
+	texto02 = f"Nome em minúsculas: {nome_minusculo}"
+	print(texto02)
+	engine.say(texto02)
 	espacos()
 	
-	print(f"Quantidade de letras sem espaços: {quantidade_letras}")
-	engine.say(f"Quantidade de letras sem espaços: {quantidade_letras}")
+	texto03 = f"Quantidade de letras sem espaços: {quantidade_letras}"
+	print(texto03)
+	engine.say(texto03)
 	espacos()
 	
-	print(f"Quantidade de letras do primeiro nome: {quantidade_primeiro_nome}")
-	engine.say(f"Quantidade de letras do primeiro nome: {quantidade_primeiro_nome}")
+	texto04 = f"Quantidade de letras do primeiro nome: {quantidade_primeiro_nome}"
+	print(texto04)
+	engine.say(texto04)
 	espacos()
 	
 	fim()
