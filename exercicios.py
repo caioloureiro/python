@@ -29,32 +29,37 @@ keyboard.add_hotkey('esc', sair_com_esc)
 while True:
 	#Tela de seleção de exercícios
 	os.system('color 0a')
-	print(""
-	"Bem-vindo aos exercícios de Python!\n" \
-	"001 - Escreva 'Olá, Mundo!' na tela.\n" \
-	"002 - Crie um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas.\n" \
-	"003 - Crie um programa que leia dois números e mostre a soma entre eles.\n" \
-	"004 - Crie um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo e todas as informações possíveis sobre ele.\n" \
-	"005 - Crie um programa que leia um número e mostre o seu antecessor e o seu sucessor.\n" \
-	"006 - Crie um programa que leia um número e mostre o seu dobro, triplo e raiz quadrada.\n" \
-	"007 - Crie um programa que leia duas notas de um aluno e mostre a sua média.\n" \
-	"008 - Crie um programa que leia um valor em metros e o exiba convertido em centímetros e milímetros.\n" \
-	"009 - Crie um programa que leia um número e mostre a sua tabuada.\n" \
-	"010 - Crie um programa que leia um valor em reais e o converta para dólares.\n" \
-	"011 - Crie um programa que leia a largura e a altura de uma parede em metros e calcule a sua área e a quantidade de tinta necessária para pintá-la.\n" \
-	"012 - Crie um programa que leia o preço de um produto e mostre seu novo preço, com 5% de desconto.\n" \
-	"013 - Faça um programa que leia o salário de um funcionário e mostre seu novo salário, com 15% de aumento.\n" \
-	"014 - Crie um programa que converta uma temperatura digitada em °C e converta para °F.\n"
-	"015 - Escreva um programa que pergunte a quantidade de quilômetros percorridos por um carro alugado e a quantidade de dias pelos quais ele foi alugado. Calcule o preço a pagar, sabendo que o carro custa R$60 por dia e R$0,15 por km rodado.\n" \
-	"016 - Crie um programa que leia um número qualquer pelo teclado e mostre na tela a sua porção inteira.\n" \
-	"017 - Crie um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa.\n"
-	"018 - Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.\n"
-	"019 - Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.\n" \
-	"020 - O mesmo professor do exercício anterior quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.\n" \
-	"021 - Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3.\n"
-	"\n" \
-	"Pressione ESC para sair.\n\n"
-	"")
+	print(
+"""Bem-vindo aos exercícios de Python!
+001 - Escreva 'Olá, Mundo!' na tela.
+002 - Crie um programa que leia o nome de uma pessoa e mostre uma mensagem de boas-vindas.
+003 - Crie um programa que leia dois números e mostre a soma entre eles.
+004 - Crie um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo e todas as informações possíveis sobre ele.
+005 - Crie um programa que leia um número e mostre o seu antecessor e o seu sucessor.
+006 - Crie um programa que leia um número e mostre o seu dobro, triplo e raiz quadrada.
+007 - Crie um programa que leia duas notas de um aluno e mostre a sua média.
+008 - Crie um programa que leia um valor em metros e o exiba convertido em centímetros e milímetros.
+009 - Crie um programa que leia um número e mostre a sua tabuada.
+010 - Crie um programa que leia um valor em reais e o converta para dólares.
+011 - Crie um programa que leia a largura e a altura de uma parede em metros e calcule a sua área e a quantidade de tinta necessária para pintá-la.
+012 - Crie um programa que leia o preço de um produto e mostre seu novo preço, com 5% de desconto.
+013 - Faça um programa que leia o salário de um funcionário e mostre seu novo salário, com 15% de aumento.
+014 - Crie um programa que converta uma temperatura digitada em °C e converta para °F.
+015 - Escreva um programa que pergunte a quantidade de quilômetros percorridos por um carro alugado e a quantidade de dias pelos quais ele foi alugado. Calcule o preço a pagar, sabendo que o carro custa R$60 por dia e R$0,15 por km rodado.
+016 - Crie um programa que leia um número qualquer pelo teclado e mostre na tela a sua porção inteira.
+017 - Crie um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo retângulo, calcule e mostre o comprimento da hipotenusa.
+018 - Faça um programa que leia um ângulo qualquer e mostre na tela o valor do seno, cosseno e tangente desse ângulo.
+019 - Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome dos alunos e escrevendo na tela o nome do escolhido.
+020 - O mesmo professor do exercício anterior quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.
+021 - Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3.
+022 - Crie um programa que leia o nome completo de uma pessoa e mostre: o nome em maiúsculas, o nome em minúsculas, a quantidade de letras sem espaços e a quantidade de letras do primeiro nome.
+023 - Faça um programa que leia um número de 0 a 9999 e mostre na tela cada um dos dígitos separados, ou seja, unidade, dezena, centena e milhar.
+024 - Crie um programa que leia o nome de uma cidade e diga se ela começa ou não com o nome "SANTO".
+025 - Crie um programa que leia o nome de uma pessoa e diga se ela tem "SILVA" no nome.
+026 - Crie um programa que leia uma frase pelo teclado e mostre: quantas vezes aparece a letra "A", em que posição ela aparece a primeira vez e em que posição ela aparece a última vez.
+027 - Faça um programa que leia o nome completo de uma pessoa e mostre o primeiro e o último nome separadamente.
+Pressione ESC para sair.\n\n"""
+	)
 
 	texto = "Digite o número do exercício que deseja executar: "
 	engine.say(f"{texto} ou pressione ESC para sair.")
@@ -143,6 +148,24 @@ while True:
 		elif exercicio == "021":
 			from exercicios import ex021
 			ex021.executar()
+		elif exercicio == "022":
+			from exercicios import ex022
+			ex022.executar()
+		elif exercicio == "023":
+			from exercicios import ex023
+			ex023.executar()
+		elif exercicio == "024":
+			from exercicios import ex024
+			ex024.executar()
+		elif exercicio == "025":
+			from exercicios import ex025
+			ex025.executar()
+		elif exercicio == "026":
+			from exercicios import ex026
+			ex026.executar()
+		elif exercicio == "027":
+			from exercicios import ex027
+			ex027.executar()
 		else:
 			texto = "Exercício não encontrado!"
 			print(texto)
