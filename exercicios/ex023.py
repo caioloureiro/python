@@ -17,8 +17,10 @@ def executar():
 	pause()
 	espacos()
 	
+	engine.say(f"Digite um número entre 0 e 9999: ")
 	numero = int(input("Digite um número entre 0 e 9999: "))
-	engine.say(f"Você digitou: {numero}")
+
+	pause()
 	
 	if numero < 0 or numero > 9999:
 		print("Erro: o número deve estar entre 0 e 9999!")
@@ -36,20 +38,25 @@ def executar():
 	unidade = int(numero_str[3])
 	
 	espacos()
-	print(f"Milhar: {milhar}")
-	engine.say(f"Milhar: {milhar}")
+
+	texto01 = f"Milhar: {milhar}"
+	print(texto01)
+	engine.say(texto01)
 	espacos()
 	
-	print(f"Centena: {centena}")
-	engine.say(f"Centena: {centena}")
+	texto02 = f"Centena: {centena}"
+	print(texto02)
+	engine.say(texto02)
 	espacos()
 	
-	print(f"Dezena: {dezena}")
-	engine.say(f"Dezena: {dezena}")
+	texto03 = f"Dezena: {dezena}"
+	print(texto03)
+	engine.say(texto03)
 	espacos()
 	
-	print(f"Unidade: {unidade}")
-	engine.say(f"Unidade: {unidade}")
+	texto04 = f"Unidade: {unidade}"
+	print(texto04)
+	engine.say(texto04)
 	espacos()
 	
 	fim()
