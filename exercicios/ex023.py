@@ -30,23 +30,22 @@ def executar():
 		return
 	
 	# Formata com zeros à esquerda
-	numero_str = str(numero).zfill(4)
-	
-	milhar = int(numero_str[0])
-	centena = int(numero_str[1])
-	dezena = int(numero_str[2])
-	unidade = int(numero_str[3])
+	# numero_str = str(numero).zfill(4)
+	# unidade = int(numero_str[3])
+	# dezena = int(numero_str[2])
+	# centena = int(numero_str[1])
+	# milhar = int(numero_str[0])
+
+	unidade = numero // 1 % 10
+	dezena = numero // 10 % 10
+	centena = numero // 100 % 10
+	milhar = numero // 1000 % 10
 	
 	espacos()
 
-	texto01 = f"Milhar: {milhar}"
-	print(texto01)
-	engine.say(texto01)
-	espacos()
-	
-	texto02 = f"Centena: {centena}"
-	print(texto02)
-	engine.say(texto02)
+	texto04 = f"Unidade: {unidade}"
+	print(texto04)
+	engine.say(texto04)
 	espacos()
 	
 	texto03 = f"Dezena: {dezena}"
@@ -54,9 +53,14 @@ def executar():
 	engine.say(texto03)
 	espacos()
 	
-	texto04 = f"Unidade: {unidade}"
-	print(texto04)
-	engine.say(texto04)
+	texto02 = f"Centena: {centena}"
+	print(texto02)
+	engine.say(texto02)
+	espacos()
+	
+	texto01 = f"Milhar: {milhar}"
+	print(texto01)
+	engine.say(texto01)
 	espacos()
 	
 	fim()
