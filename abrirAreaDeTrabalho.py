@@ -41,3 +41,6 @@ print("Aguardando 2 segundos localhost...")
 time.sleep(2)
 
 webbrowser.open("http://localhost/")
+
+print("Bye Bye...")
+time.sleep(2)
